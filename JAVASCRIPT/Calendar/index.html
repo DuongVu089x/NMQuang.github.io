@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title> Bài tập Javascript 2</title>
+	</head>
+	<body>
+		<marquee><h2>Bài tập Javascript: Calendar</h2></marquee>
+		<div id="container">
+			<input type="text" id="calendar-input" onClick="showCalendar()" ondblclick="hideCalendar()">
+			<form style="width:300px ">
+				<div id="calendar-panel">
+					<table style="width: 340px;">
+						<tr>
+							<th class="button" onclick="prevYear()"><a>&#8647;</a></th>
+							<th class="button" onclick="prevMonth()"><a>&#8592;</a></th>
+							<th id="currentMonth"><select id="month" onchange="drawMonth()"></select></th>
+							<th><select id="year" onchange="drawYear()"></select></th>
+							<th class="button" onclick="nextMonth()"><a>&#8594;</a></th>
+							<th class="button" onclick="nextYear()"><a>&#8649;</a></th>
+						</tr>
+					</table>
+				</div>
+			</form>
+		</div>	
+		
+		<script src="js/script.js"></script>
+	</body>
+</html>

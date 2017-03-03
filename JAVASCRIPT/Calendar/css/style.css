@@ -1,0 +1,52 @@
+﻿
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    padding: 5px;	
+}
+
+#calendar-panel table {
+	width: 350px;
+}
+
+/* ID */
+#calendar-input {
+	height: 25px;
+	width: 150px;
+	background: white url(../image/calendar_icon.png) no-repeat right top ;
+	background-size: 25px 25px;
+}
+
+#calendar-panel {
+	height: 350px;
+	width: 350px;
+}
+
+#month {
+	width: 100px;
+}
+
+#year {
+	width: 55px;
+}
+
+.label {
+	background: aqua;
+	color: red;
+	border: 1px solid black;
+	font-size: large;
+	font-weight: bold;
+}
+
+/* Class */
+.button {
+	background: #A9CCE3;
+	cursor: pointer;
+}
+.day {
+	background: aqua;
+}
