@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		
+		<title> Bài tập Javascript 1</title>
+	</head>
+	<body>
+		<marquee><h2>Bài tập Javascript: Slider</h2></marquee>
+		<div id="main-image-container">
+			<div class="slide-image" id="slide-image-1">
+				<img src="image/image-slider-1.jpg" alt="">
+			</div>
+			
+			<div class="slide-image" id="slide-image-2">
+				<img src="image/image-slider-2.jpg" alt="">
+			</div>
+			
+			<div class="slide-image" id="slide-image-3">
+				<img src="image/image-slider-3.jpg" alt="">
+			</div>
+			
+			<div class="slide-image" id="slide-image-4"> 
+				<img src="image/image-slider-4.jpg" alt="">
+			</div>
+			<img id="prev" class="nav" src="image/prev.png" alt="">
+			<img id="next" class="nav" src="image/next.png" alt="">
+		</div>
+		<div id="small-image-container">
+			<span class="small-image active" id="small-image-1" onclick="$('.small-image').onClick(1);">
+				<img src="image/image-slider-1.jpg" alt="">
+			</span>
+			<span class="small-image" id="small-image-2" onclick="$('.small-image').onClick(2);">
+				<img src="image/image-slider-2.jpg" alt="">
+			</span>
+			<span class="small-image" id="small-image-3" onclick="$('.small-image').onClick(3);" >
+				<img src="image/image-slider-3.jpg" alt="">
+			</span>
+			<span class="small-image" id="small-image-4" onclick="$('.small-image').onClick(4);">
+				<img src="image/image-slider-4.jpg" alt="">
+			</span>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
