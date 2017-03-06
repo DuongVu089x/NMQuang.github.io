@@ -6,6 +6,7 @@ function showCalendar() {
 	document.getElementById("calendar-panel").style.display = "block";
 }
 document.getElementById("currentMonth").colSpan = 2;
+
 //Hide calendar
 function hideCalendar() {
 	document.getElementById("calendar-panel").style.display = "none";
@@ -22,6 +23,7 @@ var calendarPanel = document.getElementById("calendar-panel");
 
 var months = document.getElementById("month");
 var years = document.getElementById("year");
+var currentInput = document.getElementById("calendar-input");
 var currentDay = new Date();
 var currentMonth = currentDay.getMonth();
 var currentYear = currentDay.getFullYear();
@@ -117,7 +119,7 @@ function drawCalendar(month,year) {
 			if (i > 0 || j >= startDay) {
 				// set in days in month background color
 				cell.appendChild(document.createTextNode(day));
-				cell.setAttribute("onClick", "getSelectedDate("+day+", "+this.month+", "+this.year+")");
+				cell.setAttribute("onClick", "doSelectedDate("+day+", "+this.month+", "+this.year+")");
 				cell.className = "day";
 				cell.style.background = "#1385C0";
 				day++;
@@ -177,7 +179,7 @@ function setYear() {
 
 //Draw calendar by year selected
 function drawYear() {
-	currentyear = months.options[years.selectedIndex].value;
+	currentYear = months.options[years.selectedIndex].value;
 	clearCalendar();
 	drawTable();
 	drawCalendar(currentMonth,currentYear);
@@ -244,4 +246,14 @@ function prevYear() {
 	drawTable();
 	drawCalendar(currentMonth, currentYear);
 }
-
+/* 
+ Set time when we click another day in calendar, in textbox will have this day
+ @param {number} day
+ @param {number} month
+ @param {numeber} year
+*/
+function doSelectedDate(day, month, year) {
+	var currentDay = day + "/" + (parseInt(month) + 1) + "/" + year;
+	currentInput.value = currentDay;
+	hideCalendar();
+}
