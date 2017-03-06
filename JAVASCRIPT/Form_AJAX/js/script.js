@@ -178,7 +178,7 @@ function setYear() {
 
 //Draw calendar by year selected
 function drawYear() {
-	currentyear = months.options[years.selectedIndex].value;
+	currentYear = months.options[years.selectedIndex].value;
 	clearCalendar();
 	drawTable();
 	drawCalendar(currentMonth,currentYear);
