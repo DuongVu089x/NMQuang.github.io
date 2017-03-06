@@ -1,3 +1,4 @@
+﻿
 ﻿<!DOCTYPE html>
 <html>
 	<head>
@@ -8,61 +9,112 @@
 	<style>
 		.container {
 			border: 2px solid #000000;
-			width: 810px;
+			width: 1010px;
 			height: auto;
-			margin-left:300px;
+			margin-left:100px;
 		}
+
 		h2 {
 			color: white;
 		}
+
 		.exercise_box {
-			width: 400px;
-			height: 500px;
+			width: 500px;
+			height: 400px;
 			border: 1px solid white;
 			float: left;
 			background-color: #A3A3A3;
 		}
+
 		.title_box {
-			width: 100%;
-			height: 40px;
+			width: 50%;
+			height: 50px;
 			background-color: gray;
+			text-align: center;
+			padding-top: 5px;
+			margin-left: 130px;
 		}
+		
+		.title_box:hover {
+			background-color: aqua;
+		}
+		
+		ul li {
+			list-style: none;
+			margin: 10px;
+		}
+		ul li:before {
+			content: url("image/star.gif");
+			margin-left: 150px;
+		}
+		ul li a {
+			text-decoration: none;
+		}
+
 	</style>
     	<body>
 		<marquee><h2>LINK TỔNG HỢP CÁC BÀI TẬP</h2></marquee>
         		<div class="container">
+			<!--Start HTML-CSS -->
             			<div class ="exercise_box">
 				<div class ="title_box">
 					<h2>Bài tập HTML-CSS</h2>
 				</div>
 				<div class ="content_box">
-					<div class="source_box">
-						<div class="task">
-							<a href =""><h2>Bài tập web 1: </h2></a>
-						</div>
-						<div class="task">
-							<a href =""><h2>Bài tập web 2: </h2></a>
-						</div>
-						<div class="task">
-							<a href =""><h2>Bài tập web 3: </h2></a>
-						</div>
-						<div class="task">
-							<a href =""><h2>Bài tập web 4: </h2></a>
-						</div>
-						<div class="task">
-							<a href =""><h2>Bài tập web 5: </h2></a>
-						</div>
-						<div class="task">
-							<a href =""><h2>Bài tập web 6: </h2></a>
-						</div>
-					</div>
+					<ul>
+						<li><a href ="https://nmquang.github.io/HTML-CSS/Web1/app.html">Bài tập web 1:</a></li>
+						<li><a href ="https://nmquang.github.io/HTML-CSS/Web2/index.html">Bài tập web 2: </a></li>
+						<li><a href ="https://nmquang.github.io/HTML-CSS/Web3/index.html">Bài tập web 3: </a></li>
+						<li><a href ="https://nmquang.github.io/HTML-CSS/Web4/index.html">Bài tập web 4: </a></li>
+						<li><a href ="https://nmquang.github.io/HTML-CSS/Web5/index.html">Bài tập web 5: </a></li>
+						<li><a href ="https://nmquang.github.io/HTML-CSS/Web6/index.html">Bài tập web 6: </a></li>
+						
+					</ul>
 				</div>
 			</div>
+			<!--End HTML-CSS -->
+			<!--Start JAVASCRIPT -->
 			<div class ="exercise_box">
-		
+				<div class ="title_box">
+					<h2>Bài tập JAVASCRIPT</h2>
+				</div>
+				<div class ="content_box">
+					<ul>
+						<li><a href ="https://nmquang.github.io/JAVASCRIPT/Slider/index.html">Bài tập Slide</a></li>
+						<li><a href ="https://nmquang.github.io/JAVASCRIPT/Calendar/index.html">Bài tập Calendar</a></li>
+						<li><a href ="https://nmquang.github.io/JAVASCRIPT/Form_AJAX/index.html">Bài tập Form Ajax</a></li>
+						<li><a href ="https://nmquang.github.io/JAVASCRIPT/Game_Monster/index.html">Bài tập Game Monster</a></li>
+					</ul>
+				</div>
 
 			</div>
-			
+			<!--End JAVASCRIPT -->
+			<!--Start jQUERY -->
+			<div class ="exercise_box">
+				<div class ="title_box">
+					<h2>Bài tập JQUERY</h2>
+				</div>
+				<div class ="content_box">
+					
+						<div class="task">
+							<a href =""><h2>Bài tập Slide: </h2></a>
+						</div>
+						<div class="task">
+							<a href =""><h2>Bài tập Calendar: </h2></a>
+						</div>
+						<div class="task">
+							<a href =""><h2>Bài tập Form_AJAX: </h2></a>
+						</div>
+						<div class="task">
+							<a href =""><h2>Bài tập Game Monster:  </h2></a>
+						</div>
+						
+					
+				</div>
+
+			</div>
+			<!--End jQUERY -->
         		</div>
     	</body>
 </html>
+

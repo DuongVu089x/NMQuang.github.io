@@ -27,7 +27,7 @@ var currentMonth = currentDay.getMonth();
 var currentYear = currentDay.getFullYear();
 var MONTH = 1;
 var DAYOFWEEK = 7;
-var calendarTable = document.getElementByTagName("table")[0];
+var calendarTable = document.getElementsByTagName("table")[0];
 
 
 //Create Calendar
