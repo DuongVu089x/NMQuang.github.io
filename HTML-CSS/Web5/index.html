@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>Bài tập 5</title>
-	
+		<script src="js/jquery-3.1.1.min.js"></script>
 	</head>
 	<body>
 		<!--Start content -->
@@ -53,11 +53,11 @@
 							
 						</div>
 						<div class="list_content">
-						<div class="title_below_content">
+						<div class="title_below_content" >
 							<h2>The House Bunny(M)</h2>
-							<a id="icon_below_left_1" href="javascript:hideContent('film_1');"></a>
+							<a class="icon_below_left"  href="#" onclick="$('.icon_belox_left').onClick(1);" id="icon_1" ondblclick="$('.icon_belox_left').ondbClick(1)"></a>
 						</div>
-						<div class="about_film" id="film_1">
+						<div class="about_film active" id="film_1">
 							<img src="image/1_pic.jpg" alt="">
 							<div class="text_below_content" id="text_1">
 								<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls from Zeta Alpha Zeta</p>
@@ -66,11 +66,11 @@
 							</div>
 						
 						</div>
-						<div class="title_below_content">
+						<div class="title_below_content" >
 							<h2>Eagle Eye(M)</h2>
-							<a href="#" id="icon_below_left_2"></a>
+							<a href="#" class="icon_below_left sub_active" onclick="$('.icon_belox_left').onClick(2);" id="icon_2" ondblclick="$('.icon_belox_left').ondbClick(2)"></a>
 						</div>
-						<div class="about_film" id="film_2">
+						<div class="about_film active" id="film_2">
 							<img src="image/1_pic.jpg" alt="">
 							<div class="text_below_content"  id="text_1">
 								<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls from Zeta Alpha Zeta</p>
@@ -81,9 +81,9 @@
 						</div>
 						<div class="title_below_content">
 							<h2>Journey To The Centre Of The Earth(PG)</h2>
-							<a href="#" id="icon_below_left_3"></a>
+							<a href="#" class="icon_below_left sub_active" onclick="$('.icon_belox_left').onClick(3);"  id="icon_3" ondblclick="$('.icon_belox_left').ondbClick(3)""></a>
 						</div>
-						<div class="about_film" id="film_3">
+						<div class="about_film active" id="film_3">
 							<img src="image/1_pic.jpg" alt="">
 							<div class="text_below_content"  id="text_1">
 								<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls from Zeta Alpha Zeta</p>
@@ -204,20 +204,6 @@
 			<p>Copyright 2008 News Limited. All times AEST(GMT +10)</p>
 		</footer>
 		<!--End footer -->
-		<script language="javascript">
-			function hideContent(showhideDiv){
-			var div = document.getElementById(showhideDiv);
-			if(div.style.display == "block"){	
-				div.style.display = "none";
-			}else{
-				div.style.display = "block";
-			}
-			}
-
-			function check(){
-				
-			}
-		</script>
-		
+	<script src="js/script.js"></script>
 	</body>
 </html>
