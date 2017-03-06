@@ -40,7 +40,6 @@ refresh.addEventListener("click", function(event) {
 	event.preventDefault();
 	document.forms["form"]["password"].value = null;
 	document.forms["form"]["email"].value = null;
-	document.forms["form"]["birthday"].value = null;
 	document.forms["form"]["username"].value = null;
 	usernameError.innerHTML = "";
 	passwordError.innerHTML = "";
