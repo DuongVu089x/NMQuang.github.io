@@ -1,43 +1,43 @@
-﻿*{
+﻿* {
 	margin: 0;
 	padding: 0;
 }
 
-body{
+body {
 	background-color: white;
 }
 
-p,h2{
+p,h2 {
 	font-family: Arial, Helvatica, sans-serif;
 	font-size: 11px;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #0a6395;
 }
 
-li{
+li { 
 	list-style: none;
 }
 
-#content{
+#content {
 	margin: 50px 300px;
 	background-color: #e6f3fb;
 	width: 450px;
 	height: 800px;
 }
 
-#blogroll{
+#blogroll {
 	margin: 10px;
 }
 
-#blogroll h2{
+#blogroll h2 {
 	padding-top: 10px;
 	font-size: 13px;
 }
 
-#blogroll_content{
+#blogroll_content {
 	width: 430px;
 	height: 240px;
 	background-color: #FFF;
@@ -46,56 +46,56 @@ li{
 	border-top-color: #ffa500;
 }
 
-#blogroll_image{
+#blogroll_image {
 	margin: 10px;
 	width: 430px;
 	height: 100px;
 }
 
-#image{
+#image {
 	border: 1px solid #cccccc;
 	width: 254px;
 	height: 102px;
 	float: left;
 }
 
-#blogroll_image img{
+#blogroll_image img {
 	width: 250px;
 	height: 100px;
 	padding: 1px;
 }
 
-#blogroll_text{
+#blogroll_text {
 	float: right;
 	width: 100px;
 	height: 100px;
 	margin-right: 50px;
 }
 
-#blogroll_text h2{
+#blogroll_text h2 {
 	color: #0a6395;
 }
 
-#blogroll_text p{
+#blogroll_text p {
 	word-spacing: 3px;	
 }
 
-#p_special{
+#p_special {
 	font-style: italic;
 }
 
-#blogroll_list{
+#blogroll_list {
 	background-color: #faf0bf;
 	margin-top: 5px;
 	height: 120px;
 	
 }
 
-#blogroll_list ul{
+#blogroll_list ul {
 	margin-left: 10px;
 }
 
-#blogroll_list ul li{
+#blogroll_list ul li {
 	padding: 8px;
 	border-top-style: solid;
 	border-top-color: #faf0cc; 
@@ -103,16 +103,16 @@ li{
 	border-bottom-color: #faf0cc;
 }
 
-#horoscopes{
+#horoscopes {
 	margin-left: 10px;
 }
 
-#horoscopes h2{
+#horoscopes h2 {
 	padding-top: 10px;
 	font-size: 13px;
 }
 
-#horoscopes_content{
+#horoscopes_content {
 	width: 430px;
 	height: 215px;
 	background-color: #FFF;
@@ -121,12 +121,12 @@ li{
 	border-top-color: #ffa500;
 }
 
-#horoscopes_content img{
+#horoscopes_content img {
 	width: 130px;
 	height: 150px;
 }
 
-#libra_content{
+#libra_content {
 	float: right;
 	width: 240px;
 	height: 150px;

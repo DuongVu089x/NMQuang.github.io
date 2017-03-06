@@ -24,6 +24,10 @@ a {
 	text-decoration: none;
 }
 
+ul li::before {
+   	content: url(../image/star.gif);
+   	margin-right: 6px;
+}
 
 #container{
 	width: 500px;
@@ -35,7 +39,7 @@ a {
 	height: 25px;
 	font-weight: bold;
 	line-height: 25px;
-	
+	background-image: url("../image/title.gif");
 }
 
  #player-profile{

@@ -1,40 +1,41 @@
-﻿*{
+﻿* {
 	margin: 0;
 	padding: 0;
 }
 
-body{
+body {
 	background-color: white;
 }
 
-p{
+p {
 	font-family: Arial,serif;
 }
-a{
+
+a {
 	text-decoration: none;
 	color: #1385C0;
 	font-weight: bold;
 	font-size: 13px;
 }
 
-li{
+li {
 	list-style: none;
 }
 
-#content{
+#content {
 	width: 1000px;
 	height: auto;
 	margin-left: 200px;
 	background-color: #292728;
 }
 
-#left_content{
+#left_content {
 	float: left;
 	width: 660px;
 	height: auto;
 }
 
-#above_content{
+#above_content {
 	width: 650px;
 	height: 300px;
 	margin-top: 10px;
@@ -42,7 +43,7 @@ li{
 	margin-left: 2px;
 }
 
-.text_above_content{
+.text_above_content {
 	height: 300px;
 	width: 320px;
 	float: left;
@@ -51,14 +52,14 @@ li{
 	background-color: white;
 }
 
-.title_above_content{
+.title_above_content {
 	height: 25px;
 	border-bottom-style: dotted;
 	border-width: 1px;
 	background: url("../image/h2-confidential-heading-bg.gif");
 }
 
-.title_above_content h2{
+.title_above_content h2 {
 	color: white;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -66,39 +67,39 @@ li{
 	padding-top: 6px;
 }
 
-#image_title{
+#image_title {
 	height: 150px;
 	width : 300px;
 	padding: 10px 10px 0px 10px;
 }
 
-#main1_above_content{
+#main1_above_content {
 	margin-left: 10px;
 	background: url("../image/h3-confidential-showbuzz-bg.gif") no-repeat;
 }
 
-#main1_above_content p, #main2_above_content p{
+#main1_above_content p, #main2_above_content p {
 	text-align: right;
 	padding-right: 30px;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
 
-#main2_above_content{
+#main2_above_content {
 	margin-left: 10px;
 	background: url("../image/h3-confidential-shootingstars-bg.gif") no-repeat ;
 }
 
-.text_content{
+.text_content {
 	margin-left: 10px;
 	margin-top: 10px;
 }
 
-.text_content p, .text_content strong{
+.text_content p, .text_content strong {
 	font-size: 13px;
 }
 
-#bg_image{
+#bg_image {
 	width: 640px;
 	height: 30px;
 	float: left;
@@ -107,33 +108,33 @@ li{
 	background-color: white;
 }
 
-#below_content{
+#below_content {
 	margin-top: 50px;
 	width: 640px;
 	height: 500px;
 	margin-left: 2px;
 }
 
-#left_below_content{
+#left_below_content {
 	width: 310px;
 	height: auto;
 	float: left;
 	background-color: white;
 }
 
-#right_below_content{
+#right_below_content {
 	float: right;
 	background-color: white;
 	width: 310px;
 }
 
-.movie_reviews{
+.movie_reviews {
 	width: 310px;
 	height: 30px;
 	background: url("../image/h2-top-movie-trailers-bg.gif") repeat-x;
 }
 
-.movie_reviews h2{
+.movie_reviews h2 {
 	color: white;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -141,14 +142,14 @@ li{
 	padding-top: 6px;
 }
 
-.title_below_content{
+.title_below_content {
 	background: url("../image/h3-movie-trailers-bg.gif");
 	width: 310px;
 	height: 25px;
 	border-top: #DCDCDC solid 2px;
 }
 
-.title_below_content h2{
+.title_below_content h2 {
 	font-size: 13px;
 	color: #1385C0;
 	margin-left: 10px;
@@ -156,7 +157,7 @@ li{
 	float: left;
 }
 
-#icon_below_left_1{
+.icon_below_left {
 	float: right;
 	background: url("../image/top-movie-trailers-arrows.gif") no-repeat;
 	background-position: 0 0;
@@ -165,16 +166,13 @@ li{
 	margin: 8px 10px 3px 0;
 }
 
-#icon_below_left_2{
-	float: right;
-	background: url("../image/top-movie-trailers-arrows.gif") no-repeat;
-	background-position: 0 -22px;
-	width: 8px;
-	height: 8px;
-	margin: 8px 10px 3px 40px;
+.about_film {
+	margin-left: 10px;
+	margin-top: 5px;
+	display: block;
 }
 
-#icon_below_left_3{
+.sub_active {
 	float: right;
 	background: url("../image/top-movie-trailers-arrows.gif") no-repeat;
 	background-position: 0 -22px;
@@ -182,59 +180,58 @@ li{
 	height: 8px;
 	margin: 8px 10px 3px 0;
 }
-.about_film{
-	margin-left: 10px;
-	margin-top: 5px;
-	display: block;
+
+.active {
+	display: none;
 }
 
-.text_below_content{
+.text_below_content {
 	width: 190px;
 	float: right;
 	padding-bottom: 2px;
 	height: 80px;
 }
 
-.text_below_content p{
+.text_below_content p {
 	font-size: 13px;
 	margin-right: 7px;
 }
 
-#showing{
+#showing {
 	width: 310px;
 	height: 25px;
 	margin-top: 3px;
 }
 
-#showing img{
+#showing img {
 	float: left;
 	margin-left: 10px;
 }
 
-#showing p{
+#showing p {
 	float: left;
 	padding-left: 5px;
 	font-size: 13px;
 	margin-top: 2px;
 }
 
-select{
+select {
 	height: 19px;
 	width: 190px;
 	margin-top: 1px;
 	margin-left: 5px;
 }
 
-.film{
+.film {
 	border-bottom: #DCDCDC solid 2px;
 }
 
-.title_film{
+.title_film {
 	width: 310px;
 	height: 27px;
 }
 
-.title_film h2{
+.title_film h2 {
 	font-size: 17px;
 	color: #1385C0;
 	margin-left: 10px;
@@ -242,7 +239,7 @@ select{
 	float: left;
 }
 
-#icon_below_right_1{
+#icon_below_right_1 {
 	background: url("../image/topic-star-ratings.gif") no-repeat;
 	width: 60px;
 	height: 16px;
@@ -252,7 +249,7 @@ select{
 	margin-top: 9px;
 }
 
-#icon_below_right_2{
+#icon_below_right_2 {
 	background: url("../image/topic-star-ratings.gif") no-repeat;
 	width: 60px;
 	height: 16px;
@@ -262,12 +259,12 @@ select{
 	margin-top: 9px;
 }
 
-#list_film{
+#list_film {
 	width: 310px;
 	height: 20px;
 }
 
-#list_film h2{
+#list_film h2 {
 	font-size: 13px;
 	color: #1385C0;
 	margin-left: 10px;
@@ -275,7 +272,7 @@ select{
 	float: left;
 }
 
-#list_film p{
+#list_film p {
 	float: right;
 	text-transform: uppercase;
 	font-size: 13px;
@@ -283,7 +280,7 @@ select{
 	margin-right: 6px;
 }
 
-#right_content{
+#right_content {
 	float: right;
 	width: 280px;
 	margin-top: 20px;
@@ -291,11 +288,11 @@ select{
 	height: 680px;
 }
 
-#right_content input{
+#right_content input {
 	margin-left: 13px;
 }
 
-#right_content button{
+#right_content button {
 	background-color: #8B1C62;
 	width:70px;
 	height: 20px;
@@ -305,7 +302,7 @@ select{
 	
 }
 
-#service_content{
+#service_content {
 	clear: both;
 	width: 1000px;
 	height: 90px;
@@ -313,7 +310,7 @@ select{
 	margin-top: 10px;
 }
 
-#service_content a{
+#service_content a {
 	display: block;
 	margin-left: 38px;
 	width: 150px;
@@ -323,18 +320,18 @@ select{
 	margin-top: 10px;
 }
 
-#service_content p{
+#service_content p {
 	color: white;
 	font-size: 14px;
 	margin-bottom: 5px;
 }
 
-.service_item img{
+.service_item img {
 	width: 80px;
 	height: 40px;
 }
 
-footer{
+footer {
 	width: 1000px;
 	margin-left: 200px;
 	height: 50px;
@@ -342,23 +339,23 @@ footer{
 	height: 70px;
 }
 
-footer ul{
+footer ul {
 	text-align: center;
 	height: 35px;
 	margin-top: 10px;
 }
 
-footer li{
+footer li {
 	display: inline;
 	border-right: #1385C0 1px solid;
 }
 
-footer a{
+footer a {
 	
 	padding-right: 3px;
 }
 
-footer p{
+footer p {
 	text-align: center;
 	color: #1385C0;
 	font-size: 14px;
