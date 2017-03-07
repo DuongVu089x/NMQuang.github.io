@@ -38,14 +38,14 @@ Check username
 */
 	function checkUsername(username, usernameError) {
 	if( username == "") {
-		usernameError.html = "Please enter your username";
+		usernameError.html ("Please enter your username");
 		return false;
 	} else {
 		if( username.length < 8) {
-			usernameError.html = "Username length must be longer 8 characters";
+			usernameError.html ("Username length must be longer 8 characters");
 		return false;
 		} else {
-			usernameError.html ="";
+			usernameError.html ("");
 			return true;
 		}
 	}
@@ -58,14 +58,14 @@ Check password
 */
 	function checkPassword(password, passwordError) {
 	if( password == "") {
-		passwordError.html = "Please enter your password";
+		passwordError.html ("Please enter your password");
 		return false;
 	} else {
 		if( password.length < 8) {
-			passwordError.html = "Password length must be longer 8 characters";
+			passwordError.html ("Password length must be longer 8 characters");
 		return false;
 		} else {
-			passwordError.html="";
+			passwordError.html("");
 			return true;
 		}
 	}
@@ -135,13 +135,13 @@ Check email
 */
 	function checkEmail( email,emailError) {
 	if( email == "") {
-		emailError.html = "Please enter your email"
+		emailError.html ("Please enter your email");
 	} else {
 		if( !isEmail(email)) {
-			emailError.html = "Email wrong format";
+			emailError.html ("Email wrong format");
 			return false;
 		} else {
-			emailError.html ="";
+			emailError.html("");
 			return true;
 		}
 	}
