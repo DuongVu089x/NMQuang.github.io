@@ -30,7 +30,7 @@ var currentYear = currentDay.getFullYear();
 var MONTH = 1;
 var DAYOFWEEK = 7;
 var calendarTable = document.getElementsByTagName("table")[0];
-
+var daySelected;
 
 //Create Calendar
 function createCalendar() {
@@ -102,7 +102,7 @@ function drawCalendar(month,year) {
 	var flag = 1;//flag to check the end of month
 	var tmpStartDay = startDay;
 	var inMonth = true;//flag to check is in month
-
+	
 	//
 	for(var i= 0; i < 6; i++) {
 		var row = calendarTable.insertRow();
@@ -112,7 +112,7 @@ function drawCalendar(month,year) {
 				var prevDay = prevMonthLength - tmpStartDay + 1
 				cell.appendChild(document.createTextNode(prevDay));
 				cell.style.background = "grey";
-				cell.setAttribute("onClick", "getSelectedDate("+prevDay+", "+(this.month-1)+", "+this.year+")");
+				cell.setAttribute("onClick", "doSelectedDate("+prevDay+", "+(this.month-1)+", "+this.year+")");
 				tmpStartDay--;
 			}
 
@@ -147,11 +147,15 @@ function drawCalendar(month,year) {
 				}
 			}
 			if (!inMonth) {
-					cell.style.background = "grey";
+				cell.style.background = "grey";
+			}
+			if( (day === currentDay.getDate() + 1) && this.month === currentDay.getMonth() && this.year === currentDay.getFullYear()) {
+				cell.style.background = "red";
 			}
 		}	
 	}
 }
+
 
 //Set months list for select tag
 function setMonth() {

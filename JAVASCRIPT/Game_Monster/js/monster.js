@@ -340,7 +340,7 @@ function executeMonsterClick(monster, locationX, locationY) {
 			clearTimeout(timeOut);
 	}
 	if (locationX >= monster.currentX && locationX <= monster.currentX + 100) {
-		if (locationY >= monster.currentY && locationY <= monster.currentY +100) {
+		if (locationY >= monster.currentY && locationY <= monster.currentY +100) 		{
 			score+=50;
 			addBlood(monster.currentX,monster.currentY);
 			refreshMonster(monster);
@@ -401,9 +401,10 @@ action.addEventListener("click", function(e) {
 	//when click button pause
 	if(locationX >= pause_button.startX && locationX<= pause_button.stopX && !isStop) {
 		if(locationY >= pause_button.startY && pause_button.stopY) {
-			if(isRun) {
+			if(isRun == true) {
 				isRun = false;
 				isPause = true;
+				isBoom = false;
 			} else {
 				isRun = true;
 				isPause = false;
@@ -527,7 +528,7 @@ function drawAction() {
 	context_action.fillStyle = "black";
 	context_action.font = "20px Arial";
 	context_action.fillText("Score:" + score,10,30);
-	context_action.fillText("Random M: "+ 1,300,30);
+	context_action.fillText("Random M: "+ numberMonsterShow,300,30);
 	context_action.fillText("Heart:", 10,60);
 	context_action.fillText("Speed:" + speed,10,90);
 	var tmp = 0;
@@ -644,13 +645,17 @@ function main() {
 	}
 	if(score <= 0) {
 		gameOver();
+		isRun = false;
 
-	} else if(heart == 0) {
+	}
+	 if(heart == 0) {
 		var tmp = parseInt(localStorage.getItem("bestscore"));
 		if(tmp < score) {
 			localStorage.setItem("bestscore",score);
 		}
 		gameOver();
+		isRun = false;
+		isPause = false;
 	} else {
 		if(isRun) {
 			requestAnimationFrame(main);

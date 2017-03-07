@@ -23,13 +23,13 @@ submit.addEventListener("click", function(event) {
 	
 	if( usernameCheck == true && passwordCheck  == true && emailCheck  == true) {
 		var http = new XMLHttpRequest();
+		http.open('POST','http://minhquang.hol.es/server/server.php', true);
 		http.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
+			if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
 				alert(this.responseText);
 			}
 		}
 		var form = document.forms["form"];
-		http.open('post', 'localhost', true);
 		data = new FormData(form);
 		http.send(data);
 	}
