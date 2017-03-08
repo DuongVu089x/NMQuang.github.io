@@ -4,7 +4,6 @@ var refresh = document.getElementById("button-reset");
 var usernameError = document.getElementById("username-error");
 var passwordError = document.getElementById("password-error");
 var emailError = document.getElementById("email-error");
-var error = document.getElementsByClassName("error");
 
 submit.addEventListener("click", function(event) {
 	event.preventDefault();

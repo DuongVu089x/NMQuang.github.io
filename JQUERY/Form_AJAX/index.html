@@ -18,25 +18,25 @@
 		<div id="container">
 			<form  method="post" action="server/server.php" >
 				<table id="form-table">
+					<tbody>
 					<tr>
-						<td >Username</td>
-						<td ><input type="text" class="txt" name="username" id="username"></td>
-						<td class="error"><span id="username-error"></span></td>
+						<td class="title">Username</td>
+						<td class="input"><input type="text" class="txt" name="username" class="username"></td>
+						<td class ="error"><span id="username-error"></span></td>
 					</tr>
 					<tr>
-						<td >Password</td>
-						<td ><input type="password" class="txt" name="password" id="password"></td>
-						<td  class="error"><span id="password-error"></span></td>
+						<td class="title">Password</td>
+						<td class="input"><input type="password" class="txt" name="password" class="password"></td>
+						<td class ="error"><span id="password-error"></span></td>
 					</tr>
 					<tr>
-						<td >Email</td>
-						<td ><input type="text" class="txt" name="email" id="email"></td>
-						<td  class="error"><span id="email-error"></span></td>
-					</tr>
+						<td class="title">Email</td>
+						<td class="input"><input type="text" class="txt" name="email" class="email"></td>
+						<td class ="error"><span id="email-error"></span></td>
 					<tr>
 						<td>Birhday</td>
 						<td >
-							<input type="text" id="day">
+							<input type="text" id="day" class="txt">
 						</td>
 					</tr>
 					<tr>
@@ -46,6 +46,7 @@
 							<input type="reset" id="button-reset" value="Refresh">
 						</td>
 					</tr>
+					</tbody>
 				</table>
 			</form>
 		</div>
