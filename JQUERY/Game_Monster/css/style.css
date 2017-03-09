@@ -1,0 +1,14 @@
+﻿#canvas {
+	margin-top: -5px;
+	background-color: #1385C0;
+}
+
+.container {
+	width: 500px;
+	height: 650px;
+	margin: auto;
+}
+
+#action {
+	background-color: aqua;
+}

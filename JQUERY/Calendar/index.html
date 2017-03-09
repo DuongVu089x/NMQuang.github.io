@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang = "en">
-   <head>
-      <meta charset = "utf-8">
-      <title>jQuery UI Datepicker functionality</title>
-      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+   	<head>
+      		 <meta charset = "utf-8">
+      		 <title>jQuery Calendar</title>
+    		 <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
-      <script src = "js/jquery-3.1.1.min.js"></script>
-      <script src = "js/jquery-ui-1.12.1/jquery-ui.js"></script>
-      <script src = "js/js/jquery.datepick.js"></script>
-      <!-- Javascript -->
-      
-   </head>
+		<link href="css/style.css">
+      		 <script src = "js/jquery-3.1.1.min.js"></script>
+     		 <script src = "js/jquery-ui-1.12.1/jquery-ui.js"></script>
+     		 <script src = "js/script.js"></script>
+		
+  	 </head>
    
-   <body>
-      <!-- HTML --> 
-      <p>Enter Date: <input type="text" id="day"></p>
-   </body>
-</html>
- 
-</body>
+   	<body>
+		<marquee><h2>Bai tap Javascript: Calendar</h2></marquee>
+		<h2>Demo </h2>
+		<div id="container">
+			<input type="text" id="calendar-input" >
+			<form style="width:300px ">
+				<div id="calendar-panel">
+					<table style="width: 340px;">
+						<tr>
+							<th class="button" id="prev_year"><a>&#8647;</a></th>
+							<th class="button" id="prev_month"><a>&#8592;</a></th>
+							<th id="currentMonth"><select id="month" onchange="drawMonth()"></select></th>
+							<th><select id="year" onchange="drawYear()"></select></th>
+							<th class="button" id="next_month"><a>&#8594;</a></th>
+							<th class="button" id="next_year"><a>&#8649;</a></th>
+						</tr>
+					</table>
+				</div>
+			</form>
+		</div>
+   	</body>
 </html>
