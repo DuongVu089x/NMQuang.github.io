@@ -41,7 +41,7 @@ Check username
 		usernameError.html ("Please enter your username");
 		return false;
 	} else {
-		if( username.length < 8) {
+		if( $("#username")val()..length < 8) {
 			usernameError.html ("Username length must be longer 8 characters");
 		return false;
 		} else {
@@ -61,7 +61,8 @@ Check password
 		passwordError.html ("Please enter your password");
 		return false;
 	} else {
-		if( password.length < 8) {
+		
+		if( $("#password").val().length < 8) {
 			passwordError.html ("Password length must be longer 8 characters");
 		return false;
 		} else {
@@ -71,10 +72,22 @@ Check password
 	}
 	}
 
+/*check format email
+@param {email} string
+*/
+	function validateEmail(sEmail) {
+		var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+		if (filter.test(sEmail)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 /*
 Check format email
 */
-	function isEmail(emailStr) 
+	/*function isEmail(emailStr) 
    	{
             		var emailPat=/^(.+)@(.+)$/
             		var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"
@@ -126,7 +139,7 @@ Check format email
  
             		// If we've gotten this far, everything's valid!
             			return true;
-    	}
+    	}*/
 
 /*
 Check email
@@ -137,7 +150,7 @@ Check email
 	if( email == "") {
 		emailError.html ("Please enter your email");
 	} else {
-		if( !isEmail(email)) {
+		if( !validateEmail(email)) {
 			emailError.html ("Email wrong format");
 			return false;
 		} else {

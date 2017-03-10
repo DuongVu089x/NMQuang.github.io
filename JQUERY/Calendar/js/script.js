@@ -65,7 +65,7 @@ $(document).ready(function() {
 	@param {string, string} month, year
 	draw calendar with this month and year
 	*/
-	function drawCalendar() {
+	function drawCalendar(month,year) {
 		if(isNaN(month) || month == null) {
 			this.month = currentMonth;
 		} else {
@@ -110,13 +110,13 @@ $(document).ready(function() {
 					var prevDay = prevMonthLength - tmpStartDay + 1;
 					cell.append(document.createTextNode(prevDay));
 					cell.style.background = "grey";
-					cell.setAttribute('onClick','doSelectedDate('+prevDay+','+(this.month -1)+','+this.year+')');
+					cell.setAttribute('onclick','doSelectedDate('+prevDay+','+(this.month -1)+','+this.year+')');
 					tmpStartDay--;
 				}
 				if(i > 0 || j >= startDay) {
 					//set in days in month baclground color
 					cell.append(document.createTextNode(day));
-					cell.setAttribute("onClick","doSelectedDate("+day+", "+this.month+", "+this.year+")");
+					cell.setAttribute("onclick","doSelectedDate("+day+", "+this.month+", "+this.year+")");
 					cell.className = "day";
 					cell.style.background = "#1385C0";
 					day++;
@@ -152,33 +152,17 @@ $(document).ready(function() {
 	//Set months list for select tag
 function setMonth() {
 	for(var month = 0; month < arrayCalendarMonths.length; month++) {
-		//months.options.addOption(new Option(arrayCalendarMonths[month],month));
+		$("#month").append(new Option(arrayCalendarMonths[month],month));
 	}
 	months.value = currentMonth;
-}
-
-//Draw calendar by month selected
-function drawMonth() {
-	currentMonth = months.options[months.selectedIndex].value;
-	clearCalendar();
-	drawTable();
-	drawCalendar(currentMonth,currentYear);
 }
 
 //Set years list for select tag
 function setYear() {
 	for(var year = 1990; year < 2030; year++) {
-		//years.options.addOption(new Option(year,year));
+		$("#year").append(new Option(year,year));
 	}
 	years.value = currentYear;
-}
-
-//Draw calendar by year selected
-function drawYear() {
-	currentYear = $("#year option:selected").text();
-	clearCalendar();
-	drawTable();
-	drawCalendar(currentMonth,currentYear);
 }
 
 //Move to next month
@@ -198,9 +182,8 @@ function nextMonth() {
 }
 
 //Move to prev month
-function prevMonth() {
-	tmpCurrentmonth = months.options[months.selectedIndex].val();
-	currentMonth = parseInt(tmpCurrentmonth);
+	$("#prev_month").on("click",function(){
+	tmpCurrentmonth = 
 	currentMonth--;
 	if (currentMonth < 0) {
 		currentMonth = 11;
@@ -211,7 +194,8 @@ function prevMonth() {
 	clearCalendar();
 	drawTable();
 	drawCalendar(currentMonth, currentYear);
-}
+	}); 
+
 
 //Move to next year
 function nextYear() {
@@ -230,8 +214,7 @@ function nextYear() {
 
 //Move to prev year
 function prevYear() {
-	
-	tmpCurrentyear = years.options[selectedYear].val();
+	tmpCurrentyear = years.options[years.selectedIndex].val();
 	currentYear = parseInt(tmpCurrentyear);
 	currentYear--;
 	if (currentYear < 1990) {
@@ -254,6 +237,20 @@ function doSelectedDate(day, month, year) {
 	currentInput.value = currentDay;
 	hideCalendar();
 }
-	
+	$("#month").on("change",function(e){
+		var optionSelected = $("option:selected",this);
+		currentMonth = this.value;
+
+		clearCalendar();
+		drawTable();
+		drawCalendar(currentMonth,currentYear);
+	});
+	$("#year").on("change",function(e){
+		var optionSelected = $("option:selected",this);
+		currentYear = this.value;
+		clearCalendar();
+		drawTable();
+		drawCalendar(currentMonth,currentYear);
+	});
 
 });
