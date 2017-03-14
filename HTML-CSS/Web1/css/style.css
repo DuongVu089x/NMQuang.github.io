@@ -117,5 +117,8 @@ ul li::before {
 	width: 75%;
 }
 
+textarea {
+	resize: none;
+}
 
 

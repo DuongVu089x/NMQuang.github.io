@@ -47,7 +47,7 @@ li {
 	height: 300px;
 	width: 320px;
 	float: left;
-	border-right-style: dotted;
+	/*border-right-style: dotted;*/
 	border-width: 1px;
 	background-color: white;
 }
@@ -100,10 +100,10 @@ li {
 }
 
 #bg_image {
-	width: 640px;
+	width: 641px;
 	height: 30px;
 	float: left;
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 	background: url("../image/confidential-logo.gif") no-repeat;
 	background-color: white;
 }
@@ -360,4 +360,6 @@ footer p {
 	color: #1385C0;
 	font-size: 14px;
 }
-
+ .border_li {
+	border-right: none;
+}
