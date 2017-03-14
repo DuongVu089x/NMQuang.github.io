@@ -1,14 +1,4 @@
-﻿
-$(document).ready( function() {
-	var canvas = $("#canvas");
-	var context_canvas = canvas[0].getContext("2d");
-
-	var action = $("#action");
-	var context_action = action[0].getContext("2d");
-
-	
-//game control
-	var speed = 1;
+﻿	var speed = 1;
 	var level = 1;
 	var score = 50;
 	var numberMonsterShow;
@@ -98,6 +88,17 @@ $(document).ready( function() {
 		width: 40
 	}
 
+$(document).ready( function() {
+	var canvas = $("#canvas");
+	var context_canvas = canvas[0].getContext("2d");
+
+	var action = $("#action");
+	var context_action = action[0].getContext("2d");
+
+	
+//game control
+	
+
 //Define 
 var classCommon = function(method) {
 	var classTmpCommon = function() {
@@ -140,7 +141,7 @@ var Monster = classCommon({
 	var monsterSix = new Monster(200,400,200,300,200,400,false,false,200,400,200,300,6);
 	var monsterSeven = new Monster(0,400,100,300,0,400,false,false,0,400,100,300,7);
 	var monsterEight = new Monster(0,200,100,200,0,200,false,false,0,200,100,200,8);
-	var math = Math.floor(Math.random()*400 + 1);
+	var math = Math.floor(Math.random()*500 + 1);
 	var monsterNine = new Monster(math,math,math,math,math,math,false,false,0,0);
 
 
@@ -163,12 +164,12 @@ var Monster = classCommon({
 */
 	function refreshMonsterNine(monster) {
 		monsterNine.show = false;
-		monsterNine.startX = Math.floor(Math.random()*400 +1);
-		monsterNine.startY = Math.floor(Math.random()*400 +1);
-		monsterNine.stopX = Math.floor(Math.random()*400 +1);
-		monsterNine.stopY = Math.floor(Math.random()*400 +1);
-		monsterNine.currentX = Math.floor(Math.random()*400 +1);
-		monsterNine.currentY = Math.floor(Math.random()*400 +1)
+		monsterNine.startX = Math.floor(Math.random()*500 +1);
+		monsterNine.startY = Math.floor(Math.random()*500 +1);
+		monsterNine.stopX = Math.floor(Math.random()*500 +1);
+		monsterNine.stopY = Math.floor(Math.random()*500 +1);
+		monsterNine.currentX = Math.floor(Math.random()*500 +1);
+		monsterNine.currentY = Math.floor(Math.random()*500 +1)
 	}
 	
 //monster will be shown auto
@@ -200,7 +201,7 @@ var Monster = classCommon({
 		if(!monsterNine.show) {
 			refreshMonsterNine(monsterNine);
 		}
-		var randomNumber = Math.floor(Math.random() * 9 + 1);
+		var randomNumber = Math.floor(Math.random() * 10 + 1);
 		switch(randomNumber) {
 			case 1: {
 				if(!monsterOne.show) {
@@ -285,8 +286,8 @@ var Monster = classCommon({
 		}
 		if (monster.currentX == monster.dieX && monster.currentY == monster.dieY) {
 			flage = true;
-			score -=10;
-			heart--;
+			this.score -=10;
+			this.heart--;
 			refreshMonster(monster);
 			chooseShowMonster();
 		}
@@ -304,8 +305,8 @@ var Monster = classCommon({
 			monster.currentY -= speed;
 		}
 		if (monster.currentX == monster.stopX && monster.currentY == monster.stopY) {
-			score -=10;
-			heart--;
+			this.score -=10;
+			this.heart--;
 			refreshMonsterNine();
 			chooseShowMonster();
 		}
@@ -335,12 +336,12 @@ var Monster = classCommon({
 				isRun = false;
 				isStop = true;
 				
-			}
+			}else{
 			timeOut = setTimeout(function() {
 				isRun = true;
 				isStop = false;
 				main();
-			},8000);
+			},8000);}
 		}
 	}
 
@@ -349,7 +350,7 @@ var Monster = classCommon({
 */
 	function executeBoomClick(monster) {
 		if(monster.show) {
-			score -=10;
+			this.score -=10;
 			executeMonsterClick(monster, monster.currentX, monster.currentY);
 		}
 	}
@@ -390,35 +391,35 @@ var Monster = classCommon({
 				break;
 			}
 			case 2: {
-				numberMonsterShow = 2;
+				numberMonsterShow = 1;
 				break;
 			}
 			case 3: {
-				numberMonsterShow = 3;
+				numberMonsterShow = 2;
 				break;
 			}
 			case 4: {
-				numberMonsterShow = 4;
+				numberMonsterShow = 2;
 				break;
 			}
 			case 5: {
-				numberMonsterShow = 5;
+				numberMonsterShow = 3;
 				break;
 			}
 			case 6: {
-				numberMonsterShow = 6;
+				numberMonsterShow = 3;
 				break;
 			}
 			case 7: {
-				numberMonsterShow = 7;
+				numberMonsterShow = 4;
 				break;
 			}
 			case 8: {
-				numberMonsterShow = 8;
+				numberMonsterShow = 4;
 				break;
 			}
 			case 9: {
-				numberMonsterShow = 9;
+				numberMonsterShow = 5;
 				break;
 			}
 
@@ -433,10 +434,10 @@ var Monster = classCommon({
 		context_action.clearRect(0,0,action.width,action.height);
 		context_action.fillStyle = "#FFFFFF";
 		context_action.font = "20px Arial";
-		context_action.fillText("Score:" + score,10,30);
+		context_action.fillText("Score:" + this.score,10,30);
 		context_action.fillText("Random Monster: "+ numberMonsterShow,300,30);
-		context_action.fillText("Heart:", 10,60);
-		context_action.fillText("Speed:" + speed,10,90);
+		context_action.fillText("Heart:"+this.heart, 10,60);
+		context_action.fillText("Speed:" + this.speed,10,90);
 		var tmp = 0;
 		for(var i = 0; i < heart; i++) {
 			context_action.drawImage(heart_image,(70 + tmp), 45,20,20);
@@ -448,8 +449,8 @@ var Monster = classCommon({
 		context_action.drawImage(restart_image, restart_button.startX, restart_button.startY, restart_button.width, restart_button.height);
 		context_action.fillStyle = "#FFFFFF";
 		context_action.font = "35px Arial";
-		context_action.fillText(boom,300,75);
-		context_action.fillText(stop,360,75);
+		context_action.fillText(this.boom,300,75);
+		context_action.fillText(this.stop,360,75);
 		context_action.fillStyle="#1385C0";
 		context_action.font = "20px Arial";
 		if(isPause) {
@@ -471,7 +472,7 @@ var Monster = classCommon({
 		context_canvas.fillText("Game over",130,200);
 		context_canvas.font = "20px Arial";
 		context_canvas.fillStyle = "green";
-		context_canvas.fillText("Score = " +score,130,240);
+		context_canvas.fillText("Score = " +this.score,130,240);
 		context_canvas.fillText("Best score = " + localStorage.getItem("bestscore"),130,280);
 	}
 

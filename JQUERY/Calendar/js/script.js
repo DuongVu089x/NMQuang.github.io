@@ -154,15 +154,15 @@ function setMonth() {
 	for(var month = 0; month < arrayCalendarMonths.length; month++) {
 		$("#month").append(new Option(arrayCalendarMonths[month],month));
 	}
-	months.value = currentMonth;
+	months.value = this.currentMonth;
 }
 
 //Set years list for select tag
 function setYear() {
-	for(var year = 1990; year < 2030; year++) {
+	for(var year = 1910; year < 2030; year++) {
 		$("#year").append(new Option(year,year));
 	}
-	years.value = currentYear;
+	years.value = this.currentYear;
 }
 
 //Move to next month
@@ -237,20 +237,5 @@ function doSelectedDate(day, month, year) {
 	currentInput.value = currentDay;
 	hideCalendar();
 }
-	$("#month").on("change",function(e){
-		var optionSelected = $("option:selected",this);
-		currentMonth = this.value;
-
-		clearCalendar();
-		drawTable();
-		drawCalendar(currentMonth,currentYear);
-	});
-	$("#year").on("change",function(e){
-		var optionSelected = $("option:selected",this);
-		currentYear = this.value;
-		clearCalendar();
-		drawTable();
-		drawCalendar(currentMonth,currentYear);
-	});
 
 });
