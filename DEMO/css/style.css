@@ -1,0 +1,43 @@
+.thumbnail{
+	min-height: 200px;
+	width: 250px;
+	position: relative;
+	overflow: hidden;
+	margin-left: 40px;
+}
+
+.thumbnail img{
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	-webkit-transform:scale(1);
+	-webkit-transition:all .5s ease-out;
+}
+
+.thumbnail:hover img{
+	-webkit-transform:scale(.2);
+	-webkit-transition:all .5s ease-out;
+}
+
+.thumbnail .detail{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 40px;
+	height: 50px;
+	padding-top: 0;
+	font-weight: bold;
+	font-size: 16px;
+	opacity: 0;
+	-webkit-transition:opacity .5s ease-out;
+}
+
+
+.thumbnail:hover .detail{
+	opacity: 1;
+	-webkit-transition:opacity .5s ease-out;
+}
+
+
+
+

@@ -1,0 +1,53 @@
+@media screen and (max-width: 644px) {
+	/*Start Header*/
+	.header {
+		float: none;
+	}
+
+	div.inner {
+		height: auto;
+		margin: 0 auto;
+		padding: 0 1%;
+		text-align: center;
+		width: 98%;
+		min-width:50%;
+	}
+
+	img.header_logo {
+		float:none;
+		text-align:center;
+		margin:7px auto;
+		display:inline-block;
+		height: auto;
+	}
+
+	div.header_info {
+		float:none;
+		text-align:center;
+		margin:7px auto;
+		display:inline-block;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.phone_pc {
+		display: none !important;
+	}
+
+	.phone_sp {
+		display: inline-block !important;
+	}
+	/*End Header*/
+
+	/*Start Nav*/
+
+	/*End Nav*/
+
+	/*Start Banner*/
+	div.banner {
+		display: none;
+	}
+	/*End Banner*/
+}
