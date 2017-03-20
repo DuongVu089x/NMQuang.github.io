@@ -78,6 +78,11 @@
 	div.aside {
 		margin: 25px auto;
 	}
+	
+	div.box {
+		text-align: center;
+		margin-left: 0;
+	}
 
 	dl.index dt {
 		margin-bottom:5px;
