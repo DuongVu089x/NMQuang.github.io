@@ -15,7 +15,7 @@ a.meanmenu-reveal {
 div.nav{
 	height:auto;
 	margin:0;
-	display:none;
+	
 	}
 /* when under viewport size, .mean-container is added to body */
 .mean-container .mean-bar {
