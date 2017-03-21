@@ -2,4 +2,5 @@
 @import url("reset.css");
 @import url("style.css");
 @import url("library.meanmenu.css");
-@import url("responsive.css") screen and (min-width:0px) and (max-width: 644px);
+@import url("responsive.css") screen and (min-width:0px) and (max-width: 640px);
+@import url("responsive_1.css") screen and (min-width: 645px) and (max-width: 768px);
