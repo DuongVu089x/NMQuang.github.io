@@ -26,6 +26,7 @@ p {
 	z-index:200;
 	border-top:4px solid #f0831e;
 	float:left;
+	margin-bottom: 10px;
 }
 
 .inner {
@@ -38,6 +39,7 @@ p {
 	max-width:960px;
 	position:relative;
 	clear:both;
+
 }
 
 h1 {
@@ -320,6 +322,25 @@ img.img_1 {
 	margin-left: 10px;
 } 
 
+img.img_but {
+	opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+img.img_but:hover{
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+p.p_but {
+	opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+p.p_but:hover {
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
 .box_margin {
 	margin-left: 15px;
 }
@@ -458,7 +479,7 @@ div.footer {
 	display: block;
 	margin: 50px auto auto 10px;
 	z-index:99;
-	padding-bottom:30px;
+	
 }
 
 div.f_l {

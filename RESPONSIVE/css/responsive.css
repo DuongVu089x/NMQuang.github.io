@@ -7,6 +7,7 @@
 	}
 	.header {
 		float: none;
+		margin-bottom: 0;
 	}
 
 	div.inner {
