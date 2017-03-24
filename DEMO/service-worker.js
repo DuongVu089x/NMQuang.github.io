@@ -39,21 +39,26 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
+      return cache.addAll(filesToCache).then(function() {
+                self.skipWaiting();
+            });
     })
   );
 });
 
-self.addEventListener('fetch', function(e) {
-  const url = new URL(e.request.url);
-
-  if(url.origin == location.origin && url.pathname == '/') {
-    console.log('Page is offline - The default page is index.html');
-    e.respondWith(caches.match('/index.html'));
-
-    return;
-  }
-  e.respondWith(caches.match(e.request).then(response => response || fetch(e.request)));
+// when the browser fetches a URL…
+self.addEventListener('fetch', function(event) {
+    // … either respond with the cached object or go ahead and fetch the actual URL
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+            if (response) {
+                // retrieve from cache
+                return response;
+            }
+            // fetch as normal
+            return fetch(event.request);
+        })
+    );
 });
 
 

@@ -22,5 +22,14 @@
     } else {
         callback('Service workers aren\'t supported in this browser.', null);
     }
+
+    window.addEventListener('online',function() {
+        console.log("You are  online");
+    },false);
+
+    window.addEventListener('offline',function() {
+        console.log("You are  offline");
+        
+    },false);
  })();
  
