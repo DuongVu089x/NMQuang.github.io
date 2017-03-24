@@ -5,16 +5,7 @@
             // Registration was successful 
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
 
-            registration.pushManager.subscribe({userVisibleOnly: true}).then(function (subscription) {
-                console.log("subscription.subscriptionId: ", subscription.subscriptionId);
-                console.log("subscription.endpoint: ", subscription.endpoint);
-
-                // TODO: Send the subscription subscription.endpoint
-                // to your server and save it to send a push message
-                // at a later date
-                var register = ChromePushManager.getRegistrationId(subscription);
-                callback(null, register);
-            });
+           
         }).catch(function (err) {
             // registration failed :(
             console.log('ServiceWorker registration failed: ', err);
@@ -24,10 +15,12 @@
     }
 
     window.addEventListener('online',function() {
+       
         console.log("You are  online");
     },false);
 
     window.addEventListener('offline',function() {
+        alert("You cut internet to your app.");
         console.log("You are  offline");
         
     },false);
