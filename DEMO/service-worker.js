@@ -31,7 +31,8 @@ var filesToCache = [
   '/images/camera_3.jpg',
   '/demo.html',
   '/js/jquery-3.1.1.min.js',
-  '/js/script.js'
+  '/js/script.js',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', function(e) {
@@ -60,5 +61,6 @@ self.addEventListener('fetch', function(event) {
         })
     );
 });
+
 
 
