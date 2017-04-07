@@ -10,13 +10,13 @@
 	width: 200px;
 	height: 200px;
 	cursor: pointer;
-	-webkit-transform:scale(1);
-	-webkit-transition:all .5s ease-out;
+	/*-webkit-transform:scale(1);
+	-webkit-transition:all .5s ease-out;*/
 }
 
 .thumbnail:hover img{
-	-webkit-transform:scale(.2);
-	-webkit-transition:all .5s ease-out;
+	/*-webkit-transform:scale(.2);
+	-webkit-transition:all .5s ease-out;*/
 }
 
 .thumbnail .detail{
@@ -29,13 +29,13 @@
 	font-weight: bold;
 	font-size: 16px;
 	opacity: 0;
-	-webkit-transition:opacity .5s ease-out;
+	/*-webkit-transition:opacity .5s ease-out;*/
 }
 
 
 .thumbnail:hover .detail{
-	opacity: 1;
-	-webkit-transition:opacity .5s ease-out;
+	/*opacity: 1;
+	-webkit-transition:opacity .5s ease-out;*/
 }
 
 
