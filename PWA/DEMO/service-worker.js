@@ -29,7 +29,7 @@ var filesToCache = [
   '/images/laptop_1.jpg',
   '/images/laptop_2.jpg',
   '/images/camera_3.jpg',
-  '/demo.html',
+  '/cart.html',
   '/js/jquery-3.1.1.min.js',
   '/js/script.js',
   '/manifest.json'
