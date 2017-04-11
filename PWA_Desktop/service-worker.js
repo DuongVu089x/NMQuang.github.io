@@ -31,7 +31,7 @@ var filesToCache = [
   '/images/camera_3.jpg',
   '/cart.html',
   '/js/jquery-3.1.1.min.js',
-  '/js/script.js',
+  '/script.js',
   '/manifest.json'
 ];
 
