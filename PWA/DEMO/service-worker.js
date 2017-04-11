@@ -47,17 +47,33 @@ self.addEventListener('install', function(e) {
   );
 });
 
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if(key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cach', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
+
 // when the browser fetches a URL…
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(e) {
     // … either respond with the cached object or go ahead and fetch the actual URL
-    event.respondWith(
-        caches.match(event.request).then(function(response) {
+    console.log('[ServiceWorker] Fetch', e.request.url);
+    e.respondWith(
+        caches.match(e.request).then(function(response) {
             if (response) {
                 // retrieve from cache
                 return response;
             }
             // fetch as normal
-            return fetch(event.request);
+            return fetch(e.request);
         })
     );
 });
