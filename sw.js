@@ -15,35 +15,29 @@
 var dataCacheName = 'shopping-cart-data';
 var cacheName = 'shopping-cart-cache-v1.0';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/css/bootstrap.css',
-  '/css/font-awesome.css',
-  '/css/style.css',
-  '/images/camera_1.jpg',
-  '/images/camera_2.jpg',
-  '/images/desktop_1.jpg',
-  '/images/iphone_1.jpg',
-  '/images/iphone_2.jpg',
-  '/images/iphone_3.jpg',
-  '/images/laptop_1.jpg',
-  '/images/laptop_2.jpg',
-  '/images/camera_3.jpg',
-  '/demo.html',
-  '/js/jquery-3.1.1.min.js',
-  '/js/script.js'
+    '/',
+    '/index.html',
+    '/css/bootstrap.css',
+    '/css/font-awesome.css',
+    '/css/style.css',
+    '/images/wifi_on.png',
+    '/images/wifi_off.png',
+    '/images/bell_on.png',
+    '/images/bell_off.png',
+    '/js/jquery-3.1.1.min.js',
+    '/js/script.js'
 ];
 
 self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache).then(function() {
+    console.log('[ServiceWorker] Install');
+    e.waitUntil(
+        caches.open(cacheName).then(function(cache) {
+            console.log('[ServiceWorker] Caching app shell');
+            return cache.addAll(filesToCache).then(function() {
                 self.skipWaiting();
             });
-    })
-  );
+        })
+    );
 });
 
 // when the browser fetches a URL…
@@ -61,4 +55,19 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
+self.addEventListener('push', function(event) {
+    console.log('Received a push message.', event);
 
+    var title = 'A message from Minh Quangg';
+    var body = 'Tomorrow, let us go to movie';
+    var icon = '../images/icons/icon-32x32.png';
+    var tag = 'demo-push-notification-tab';
+
+    event.waitUntil(
+        self.registration.showNotification(title, {
+            body: body,
+            icon: icon,
+            tag: tag
+        })
+    );
+});
